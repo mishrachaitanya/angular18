@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-structural-dir',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './structural-dir.component.html',
   styleUrl: './structural-dir.component.css'
 })
@@ -26,8 +27,12 @@ export class StructuralDirComponent {
     {studId:34, totalMarks:20, gender:'male', name:'EE', city: 'Nagpur', isActive:  false},
     {studId:76, totalMarks:50, gender:'male', name:'FFF', city: 'Thane', isActive:  true},
   ]
+  constructor(private router : Router){
 
-
+  }
+  navigate_toAttribute(){
+    this.router.navigateByUrl('attribute');
+  }
   showDiv1(){
     this.isDiv1Visible=true;
   }
