@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="col-3">
-        <div *ngIf="isActive" class=" p-3 text-center" >
+        <div *ngIf="selectedState=='USA' " class=" p-3 text-center" >
             <h4>Div-4 </h4>
         </div>
     </div>
@@ -42,7 +42,7 @@
     <div class="col-3">
         <div style="display: flex;align-items:center">
             <input [(ngModel)]="isActive" type="checkbox"  class="width-50">
-            <select>
+            <select [(ngModel)]="selectedState">
                 <option value="">Select State</option>
                 <option value="India">India</option>
                 <option value="USA">USA</option>
@@ -52,7 +52,18 @@
     </div>
 </div>
 
-
+<div class="row">
+    <div *ngFor="let i of cityArray" class="col-3">{{i}}
+        <ul>
+            <li *ngFor="let city of cityArray">{{city}}</li>
+        </ul>
+    </div>
+    <div class="col-3">
+        <select >
+            <option *ngFor="let i of cityArray">{{i}}</option>
+        </select>
+    </div>
+</div>
 
 <div class="row pt-4">
     <div class="col-5">
@@ -67,13 +78,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>  </td>
-                    <td>  </td>
+                <tr *ngFor="let i of studentList; let SrNo =index">
+                    <td>{{SrNo+1}} {{i.name}} </td>
+                    <td> {{i.city}} </td>
                     <td>
-                        <span> </span>
+                        <span *ngIf="i.status">Active</span>
+                        <span *ngIf="!i.status">De-Active</span>
                     </td>
-                    <td></td>
+                    <td>{{i['gender']}}</td>
                     <td>
                         <div class="progress">
                             <div class="progress-bar" >

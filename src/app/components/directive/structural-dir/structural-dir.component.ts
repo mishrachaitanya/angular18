@@ -15,6 +15,18 @@ export class StructuralDirComponent {
   num1 :string ="";
   num2: string="";
   isActive: boolean=false;
+  selectedState: string='';
+  cityArray: string[]=['Pune','Mumbai','Nagpur','LKO'];
+
+  studentList: any[] = [
+    {studId:12, totalMarks:23, gender:'male', name:'AAA', city: 'Pune',   isActive:  false},
+    {studId:22, totalMarks:33, gender:'female', name:'BBB', city: 'Mumbai', isActive:  false},
+    {studId:32, totalMarks:67, gender:'male', name:'CC', city: 'Jalgao', isActive:  true},
+    {studId:56, totalMarks:98, gender:'female', name:'DD', city: 'Mumbai', isActive:  false},
+    {studId:34, totalMarks:20, gender:'male', name:'EE', city: 'Nagpur', isActive:  false},
+    {studId:76, totalMarks:50, gender:'male', name:'FFF', city: 'Thane', isActive:  true},
+  ]
+
 
   showDiv1(){
     this.isDiv1Visible=true;
