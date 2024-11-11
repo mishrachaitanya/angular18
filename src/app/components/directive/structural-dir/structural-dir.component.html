@@ -1,0 +1,93 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+    <h1>Attribute Directive</h1>
+    <p>[ngClass], [ngStyle]</p>
+    <button class="btn btn-primary"   >Go To Structural</button>
+</div>
+<div class="row pt-3">
+    <div class="col-3">
+        <div *ngIf="isDiv1Visible" class="p-3 text-center" >
+            <h4>Div-1 </h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="isDiv2Visible" class="p-3 text-center" >
+            <h4>Div-2 </h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="num1==num2" class="p-3 text-center" >
+            <h4>Div-3 </h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="isActive" class=" p-3 text-center" >
+            <h4>Div-4 </h4>
+        </div>
+    </div>
+</div>
+<div class="row pt-3">
+    <div class="col-3 text-center">
+        <button class="btn btn-danger" (click)="showDiv1()">Add Red</button>
+        <button class="btn btn-primary mx-2" (click)="hideDvi1()" >Add Blue</button>
+    </div>
+    <div class="col-3 text-center">
+        <button class="btn btn-success" (click)="toggleDiv2()">Toggle</button>
+    </div>
+    <div class="col-3">
+        <div style="display: flex;align-items:center">
+            <input type="text" [(ngModel)]="num1" placeholder="Num-1" class="width-50">
+            <input type="text"  [(ngModel)]="num2" placeholder="Num-2" class="width-50">
+        </div>
+    </div>
+    <div class="col-3">
+        <div style="display: flex;align-items:center">
+            <input [(ngModel)]="isActive" type="checkbox"  class="width-50">
+            <select>
+                <option value="">Select State</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Shrilanka">Shrilanka</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row pt-4">
+    <div class="col-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Status</th>
+                    <th>Gender</th>
+                    <th>Total Mark</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>
+                        <span> </span>
+                    </td>
+                    <td></td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar" >
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-5">
+        <div >
+            Div Test
+        </div>
+    </div>
+</div>

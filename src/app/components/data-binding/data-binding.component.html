@@ -1,0 +1,55 @@
+<p>data-binding works!</p>
+<div class="row">
+    <div class="col-3">
+        One way data binding: from .ts to .html
+    </div>
+    <div class="col-3">
+
+    </div>
+</div>
+<p>data-binding works!</p>
+<div class="row">
+    <div class="col-4">
+        interpolation
+        <div class="row">
+            <div class="col-4 bg-success">
+                interpolation
+                {{courseName}}
+            </div>
+            <input type="text" value="{{courseName}}" placeholder="enter text">
+            <input type="{{inputType}}">
+        </div>
+        <div class="col-4">
+            Property binding
+            <div [class]="myClassName">
+                Danger
+            </div>
+            <input type="text" [value]="courseName">
+            <input [type]="inputType">
+        </div>
+        <div class="col-4">
+            <button class="btn btn-success" (click)="showAlert('Welcome')">
+                Show Welcome
+            </button>
+            <button class="btn btn-success" (click)="changeCourseName()">Change Course Name</button>
+            <span (click)="showAlert('Span Click')"> Click Me </span>
+        </div>
+        <div>
+            <input type="text" [(ngModel)]="courseName"/>
+            -{{courseName}}
+        </div>
+        <div>
+            <select [(ngModel)]="stateName">
+                <option value="">Select</option>
+                <option value="">Uttar PRadesh</option>
+                <option value="">Maharashtra</option>
+                <option value="">Goa</option>
+            </select>
+            <input type="checkBox" [(ngModel)]="isIndian">
+            {{firstName()}}
+        </div>
+    </div>
+    <div class="col-4">
+
+    </div>
+</div>
