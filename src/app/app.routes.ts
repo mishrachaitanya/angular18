@@ -5,6 +5,8 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
 import { StructuralDirComponent } from './components/directive/structural-dir/structural-dir.component';
 import { AttributeDirectiveComponent } from './components/attribute-directive/attribute-directive.component';
 import { TemplateformComponent } from './components/templateform/templateform.component';
+import { ApiClientComponent } from './components/api-client/api-client.component';
+import { NgcontainerComponent } from './components/ngcontainer/ngcontainer.component';
 
 export const routes: Routes = [
     {
@@ -31,5 +33,13 @@ export const routes: Routes = [
     {
         path:'template',
         component:TemplateformComponent
+    },
+    {
+        path:'api',
+        component:ApiClientComponent
+    },
+    {
+        path:'container',
+        component: NgcontainerComponent
     }
 ];
